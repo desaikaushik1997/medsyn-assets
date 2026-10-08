@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="280" height="280">
+  <circle cx="70" cy="70" r="50" fill="none" stroke="#0168FA" stroke-width="2" stroke-opacity=".45"><animate attributeName="r" values="50;68" dur="3.6s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".45;0" dur="3.6s" repeatCount="indefinite"/></circle>
+  <circle cx="70" cy="70" r="50" fill="none" stroke="#0168FA" stroke-width="2" stroke-opacity=".45"><animate attributeName="r" values="50;68" dur="3.6s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".45;0" dur="3.6s" begin="1.8s" repeatCount="indefinite"/></circle>
+</svg>
