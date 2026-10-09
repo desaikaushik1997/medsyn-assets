@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 195 92" preserveAspectRatio="none" width="390" height="184">
+  <rect x="14" y="14" width="167" height="64" rx="32" ry="32" fill="none" stroke="#2F8F2F" stroke-width="3" stroke-opacity=".85" vector-effect="non-scaling-stroke">
+    <animate attributeName="x" values="14;2" dur="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="14;2" dur="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="width" values="167;191" dur="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="height" values="64;88" dur="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="32;44" dur="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="32;44" dur="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values=".85;0" dur="2.4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="14" y="14" width="167" height="64" rx="32" ry="32" fill="none" stroke="#8FD48F" stroke-width="3" stroke-opacity=".85" vector-effect="non-scaling-stroke">
+    <animate attributeName="x" values="14;2" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="14;2" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="width" values="167;191" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="height" values="64;88" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="32;44" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="32;44" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values=".85;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+  </rect>
+</svg>
