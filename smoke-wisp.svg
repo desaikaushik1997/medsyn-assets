@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" width="640" height="320">
+  <g fill="none" stroke="#1E4FA0" stroke-width="3" stroke-linecap="round">
+    <path d="M60 150 C40 120 80 100 60 70 C45 45 75 30 62 8" opacity="0"><animate attributeName="opacity" values="0;.2;.2;0" keyTimes="0;.2;.7;1" dur="7s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 14;0 -26" dur="7s" repeatCount="indefinite"/></path>
+    <path d="M150 155 C128 125 172 105 150 72 C132 46 168 28 152 6" opacity="0"><animate attributeName="opacity" values="0;.2;.2;0" keyTimes="0;.2;.7;1" dur="7s" begin="2.3s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 14;0 -26" dur="7s" begin="2.3s" repeatCount="indefinite"/></path>
+    <path d="M240 150 C222 122 258 104 240 76 C226 52 254 34 242 10" opacity="0"><animate attributeName="opacity" values="0;.2;.2;0" keyTimes="0;.2;.7;1" dur="7s" begin="4.6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 14;0 -26" dur="7s" begin="4.6s" repeatCount="indefinite"/></path>
+  </g>
+  <g fill="#1E4FA0" fill-opacity="0">
+    <circle cx="96" cy="120" r="9"><animate attributeName="fill-opacity" values="0;.09;0" dur="6s" repeatCount="indefinite"/><animate attributeName="cy" values="130;60" dur="6s" repeatCount="indefinite"/></circle>
+    <circle cx="196" cy="126" r="7"><animate attributeName="fill-opacity" values="0;.09;0" dur="5s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="cy" values="132;66" dur="5s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="282" cy="118" r="10"><animate attributeName="fill-opacity" values="0;.09;0" dur="6.5s" begin="3s" repeatCount="indefinite"/><animate attributeName="cy" values="128;58" dur="6.5s" begin="3s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>
