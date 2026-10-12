@@ -1,0 +1,672 @@
+<!DOCTYPE html><html lang='en'><head><meta name="robots" content="noindex,nofollow"><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Palette and layout picker</title><style>
+body{margin:0;background:#F4F6FA;color:#0C1A33;font-family:'Roboto','Segoe UI',Arial,sans-serif;line-height:1.5}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 16px 60px}
+h1{font-size:24px;margin:0 0 6px}h2{font-size:18px;margin:30px 0 10px}
+.note{color:#5B6B86;font-size:14px;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.pal{background:#fff;border:1px solid #E1E8F1;border-radius:14px;padding:14px}
+.pal .t{font-size:15px;font-weight:700;margin-bottom:8px}
+.pal .t span{display:inline-block;min-width:26px;text-align:center;padding:2px 8px;margin-right:8px;border-radius:999px;background:#0C1A33;color:#fff;font-size:13px}
+.sw{display:flex;gap:4px;margin:0 0 8px}.sw i{flex:1;height:26px;border-radius:6px;border:1px solid rgba(0,0,0,.08)}
+.lab{font-size:11px;color:#5B6B86;margin:6px 0 3px;text-transform:uppercase;letter-spacing:.06em}
+.lay{background:#fff;border:1px solid #E1E8F1;border-radius:14px;padding:14px}
+.lay .t{font-size:15px;font-weight:700;margin-bottom:8px}
+.lay .t span{display:inline-block;min-width:26px;text-align:center;padding:2px 8px;margin-right:8px;border-radius:8px;background:#0168FA;color:#fff;font-size:13px}
+.nav{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;margin:0 0 6px;background:#F4F6FA}
+.nav a{padding:8px 16px;border-radius:999px;background:#0C1A33;color:#fff;font-size:14px;font-weight:700;text-decoration:none}
+.nav a:hover{background:#0168FA}
+h2{scroll-margin-top:64px}
+</style></head><body><div class='wrap'><h1>Choose your look</h1><p class='note'>Reply with one palette number, one layout letter and one tap-cue level, for example: <b>palette 4, layout C, cue 1</b>. You can also paste your own Coolors link.</p><nav class='nav'><a href='#palette'>1 Palette</a><a href='#layout'>2 Layout</a><a href='#cue'>3 Tap cue</a></nav><h2 id='palette'>1. Palette</h2><div class='grid'><div class='pal'><div class='t'><span>1</span>Earth and olive</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#606C38' title='#606C38'></i><i style='background:#283618' title='#283618'></i><i style='background:#FEFAE0' title='#FEFAE0'></i><i style='background:#DDA15E' title='#DDA15E'></i><i style='background:#BC6C25' title='#BC6C25'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#606C38' title='#606C38'></i><i style='background:#283618' title='#283618'></i><i style='background:#A36622' title='#A36622'></i><i style='background:#AB6222' title='#AB6222'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #606C38;border-radius:16px;background:#EFF0EB;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#606C38;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#48512A">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#272C17">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#606C38;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#606C38;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #CFD3C3;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#EFF0EB;font-weight:700;font-size:13.5px;color:#48512A">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#272C17">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #CFD3C3;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#48512A">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#272C17">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #283618;border-radius:16px;background:#EAEBE8;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#283618;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#283618">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#222E14">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#283618;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#283618;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BEC3BA;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#EAEBE8;font-weight:700;font-size:13.5px;color:#283618">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#222E14">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #BEC3BA;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#283618">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#222E14">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>2</span>Pastel candy</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#CDB4DB' title='#CDB4DB'></i><i style='background:#FFC8DD' title='#FFC8DD'></i><i style='background:#FFAFCC' title='#FFAFCC'></i><i style='background:#BDE0FE' title='#BDE0FE'></i><i style='background:#A2D2FF' title='#A2D2FF'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#945EB2' title='#945EB2'></i><i style='background:#E70058' title='#E70058'></i><i style='background:#E70054' title='#E70054'></i><i style='background:#0375D7' title='#0375D7'></i><i style='background:#0073DF' title='#0073DF'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #945EB2;border-radius:16px;background:#F4EFF7;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#945EB2;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#663C7D">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#24162D">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#945EB2;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#945EB2;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #DFCFE8;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F4EFF7;font-weight:700;font-size:13.5px;color:#663C7D">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#24162D">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #DFCFE8;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#663C7D">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#24162D">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #E70058;border-radius:16px;background:#FDE6EE;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#E70058;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#9A003B">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#30121E">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#E70058;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#E70058;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #F8B2CD;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#FDE6EE;font-weight:700;font-size:13.5px;color:#9A003B">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#30121E">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #F8B2CD;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#9A003B">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#30121E">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>3</span>Violet haze</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#FDC5F5' title='#FDC5F5'></i><i style='background:#F7AEF8' title='#F7AEF8'></i><i style='background:#B388EB' title='#B388EB'></i><i style='background:#8093F1' title='#8093F1'></i><i style='background:#72DDF7' title='#72DDF7'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#D507B8' title='#D507B8'></i><i style='background:#CB12CD' title='#CB12CD'></i><i style='background:#8F4FE1' title='#8F4FE1'></i><i style='background:#4D68EB' title='#4D68EB'></i><i style='background:#097D99' title='#097D99'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #D507B8;border-radius:16px;background:#FBE6F8;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#D507B8;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#8B0578">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#30122C">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#D507B8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#D507B8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #F2B5EA;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#FBE6F8;font-weight:700;font-size:13.5px;color:#8B0578">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#30122C">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #F2B5EA;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#8B0578">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#30122C">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #CB12CD;border-radius:16px;background:#FAE7FA;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#CB12CD;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#850C87">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#301230">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#CB12CD;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#CB12CD;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #EFB8F0;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#FAE7FA;font-weight:700;font-size:13.5px;color:#850C87">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#301230">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #EFB8F0;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#850C87">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#301230">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>4</span>Sky and sun</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#8ECAE6' title='#8ECAE6'></i><i style='background:#219EBC' title='#219EBC'></i><i style='background:#023047' title='#023047'></i><i style='background:#FFB703' title='#FFB703'></i><i style='background:#FB8500' title='#FB8500'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#247AA3' title='#247AA3'></i><i style='background:#1A7D95' title='#1A7D95'></i><i style='background:#023047' title='#023047'></i><i style='background:#976C00' title='#976C00'></i><i style='background:#AE5C00' title='#AE5C00'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #247AA3;border-radius:16px;background:#E9F2F6;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#247AA3;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#18516C">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122730">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#247AA3;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#247AA3;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BDD7E3;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E9F2F6;font-weight:700;font-size:13.5px;color:#18516C">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122730">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #BDD7E3;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#18516C">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122730">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #1A7D95;border-radius:16px;background:#E8F2F4;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1A7D95;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#125565">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122A30">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#1A7D95;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#1A7D95;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BAD8DF;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E8F2F4;font-weight:700;font-size:13.5px;color:#125565">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122A30">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #BAD8DF;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#125565">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122A30">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>5</span>Deep ocean blues</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#03045E' title='#03045E'></i><i style='background:#023E8A' title='#023E8A'></i><i style='background:#0077B6' title='#0077B6'></i><i style='background:#0096C7' title='#0096C7'></i><i style='background:#00B4D8' title='#00B4D8'></i><i style='background:#48CAE4' title='#48CAE4'></i><i style='background:#90E0EF' title='#90E0EF'></i><i style='background:#ADE8F4' title='#ADE8F4'></i><i style='background:#CAF0F8' title='#CAF0F8'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#03045E' title='#03045E'></i><i style='background:#0077B6' title='#0077B6'></i><i style='background:#007BA3' title='#007BA3'></i><i style='background:#167D92' title='#167D92'></i><i style='background:#158094' title='#158094'></i><i style='background:#147F96' title='#147F96'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #03045E;border-radius:16px;background:#E6E6EF;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#03045E;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#03045E">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#121330">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#03045E;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#03045E;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #B3B4CF;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E6E6EF;font-weight:700;font-size:13.5px;color:#03045E">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#121330">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #B3B4CF;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#03045E">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#121330">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #0077B6;border-radius:16px;background:#E6F1F8;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#0077B6;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#00527E">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122630">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#0077B6;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#0077B6;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #B2D6E9;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E6F1F8;font-weight:700;font-size:13.5px;color:#00527E">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122630">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #B2D6E9;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#00527E">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122630">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>6</span>Soft sand</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#CCD5AE' title='#CCD5AE'></i><i style='background:#E9EDC9' title='#E9EDC9'></i><i style='background:#FEFAE0' title='#FEFAE0'></i><i style='background:#FAEDCD' title='#FAEDCD'></i><i style='background:#D4A373' title='#D4A373'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#6B793E' title='#6B793E'></i><i style='background:#717A29' title='#717A29'></i><i style='background:#956F0F' title='#956F0F'></i><i style='background:#A06831' title='#A06831'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #6B793E;border-radius:16px;background:#F0F2EC;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#6B793E;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#47502A">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#272C17">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#6B793E;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#6B793E;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #D3D7C5;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F0F2EC;font-weight:700;font-size:13.5px;color:#47502A">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#272C17">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #D3D7C5;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#47502A">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#272C17">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #717A29;border-radius:16px;background:#F1F2EA;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#717A29;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#4A501B">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#2D3012">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#717A29;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#717A29;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #D4D7BF;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F1F2EA;font-weight:700;font-size:13.5px;color:#4A501B">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#2D3012">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #D4D7BF;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#4A501B">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#2D3012">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>7</span>Green to blue</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#D9ED92' title='#D9ED92'></i><i style='background:#B5E48C' title='#B5E48C'></i><i style='background:#99D98C' title='#99D98C'></i><i style='background:#76C893' title='#76C893'></i><i style='background:#52B69A' title='#52B69A'></i><i style='background:#34A0A4' title='#34A0A4'></i><i style='background:#168AAD' title='#168AAD'></i><i style='background:#1A759F' title='#1A759F'></i><i style='background:#1E6091' title='#1E6091'></i><i style='background:#184E77' title='#184E77'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#647B14' title='#647B14'></i><i style='background:#3A822B' title='#3A822B'></i><i style='background:#36806C' title='#36806C'></i><i style='background:#297E81' title='#297E81'></i><i style='background:#1A759F' title='#1A759F'></i><i style='background:#184E77' title='#184E77'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #647B14;border-radius:16px;background:#F0F2E8;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#647B14;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#44540E">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#2A3012">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#647B14;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#647B14;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #D1D7B9;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F0F2E8;font-weight:700;font-size:13.5px;color:#44540E">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#2A3012">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #D1D7B9;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#44540E">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#2A3012">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #3A822B;border-radius:16px;background:#EBF3EA;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#3A822B;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#27581D">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#173012">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#3A822B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#3A822B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #C4DABF;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#EBF3EA;font-weight:700;font-size:13.5px;color:#27581D">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#173012">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #C4DABF;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#27581D">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#173012">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>8</span>Teal to crimson</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#001219' title='#001219'></i><i style='background:#005F73' title='#005F73'></i><i style='background:#0A9396' title='#0A9396'></i><i style='background:#94D2BD' title='#94D2BD'></i><i style='background:#E9D8A6' title='#E9D8A6'></i><i style='background:#EE9B00' title='#EE9B00'></i><i style='background:#CA6702' title='#CA6702'></i><i style='background:#BB3E03' title='#BB3E03'></i><i style='background:#AE2012' title='#AE2012'></i><i style='background:#9B2226' title='#9B2226'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#005F73' title='#005F73'></i><i style='background:#378268' title='#378268'></i><i style='background:#8C7123' title='#8C7123'></i><i style='background:#B65D02' title='#B65D02'></i><i style='background:#BB3E03' title='#BB3E03'></i><i style='background:#9B2226' title='#9B2226'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #005F73;border-radius:16px;background:#E6EFF1;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#005F73;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#005264">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122B30">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#005F73;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#005F73;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #B2CFD5;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E6EFF1;font-weight:700;font-size:13.5px;color:#005264">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122B30">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #B2CFD5;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#005264">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122B30">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #378268;border-radius:16px;background:#EBF2F0;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#378268;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#255746">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#142F26">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#378268;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#378268;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #C3D9D2;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#EBF2F0;font-weight:700;font-size:13.5px;color:#255746">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#142F26">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #C3D9D2;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#255746">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#142F26">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>9</span>Navy and slate</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#0D1B2A' title='#0D1B2A'></i><i style='background:#1B263B' title='#1B263B'></i><i style='background:#415A77' title='#415A77'></i><i style='background:#778DA9' title='#778DA9'></i><i style='background:#E0E1DD' title='#E0E1DD'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#0D1B2A' title='#0D1B2A'></i><i style='background:#1B263B' title='#1B263B'></i><i style='background:#415A77' title='#415A77'></i><i style='background:#5E7694' title='#5E7694'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #0D1B2A;border-radius:16px;background:#E7E8EA;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#0D1B2A;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#0D1B2A">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122130">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#0D1B2A;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#0D1B2A;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #B6BBBF;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E7E8EA;font-weight:700;font-size:13.5px;color:#0D1B2A">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122130">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #B6BBBF;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#0D1B2A">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122130">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #1B263B;border-radius:16px;background:#E8E9EB;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1B263B;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#1B263B">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#151D2D">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#1B263B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#1B263B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BBBEC4;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E8E9EB;font-weight:700;font-size:13.5px;color:#1B263B">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#151D2D">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #BBBEC4;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#1B263B">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#151D2D">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>10</span>Navy and amber</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#000000' title='#000000'></i><i style='background:#14213D' title='#14213D'></i><i style='background:#FCA311' title='#FCA311'></i><i style='background:#E5E5E5' title='#E5E5E5'></i><i style='background:#FFFFFF' title='#FFFFFF'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#14213D' title='#14213D'></i><i style='background:#A56702' title='#A56702'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #14213D;border-radius:16px;background:#E8E9EC;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#14213D;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#14213D">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#121C30">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#14213D;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#14213D;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #B8BCC5;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E8E9EC;font-weight:700;font-size:13.5px;color:#14213D">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#121C30">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #B8BCC5;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#14213D">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#121C30">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #A56702;border-radius:16px;background:#F6F0E6;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#A56702;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#6E4501">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#302512">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#A56702;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#A56702;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #E4D1B3;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F6F0E6;font-weight:700;font-size:13.5px;color:#6E4501">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#302512">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #E4D1B3;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#6E4501">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#302512">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>11</span>Forest sage</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#DAD7CD' title='#DAD7CD'></i><i style='background:#A3B18A' title='#A3B18A'></i><i style='background:#588157' title='#588157'></i><i style='background:#3A5A40' title='#3A5A40'></i><i style='background:#344E41' title='#344E41'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#7B745B' title='#7B745B'></i><i style='background:#6B7A51' title='#6B7A51'></i><i style='background:#567E55' title='#567E55'></i><i style='background:#3A5A40' title='#3A5A40'></i><i style='background:#344E41' title='#344E41'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #7B745B;border-radius:16px;background:#F2F1EF;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#7B745B;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#524D3D">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#26241C">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#7B745B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#7B745B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #D7D5CE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F2F1EF;font-weight:700;font-size:13.5px;color:#524D3D">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#26241C">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #D7D5CE;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#524D3D">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#26241C">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #6B7A51;border-radius:16px;background:#F0F2EE;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#6B7A51;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#485237">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#23281B">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#6B7A51;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#6B7A51;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #D3D7CB;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F0F2EE;font-weight:700;font-size:13.5px;color:#485237">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#23281B">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #D3D7CB;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#485237">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#23281B">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>12</span>Blush pinks</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#FFE5EC' title='#FFE5EC'></i><i style='background:#FFC2D1' title='#FFC2D1'></i><i style='background:#FFB3C6' title='#FFB3C6'></i><i style='background:#FF8FAB' title='#FF8FAB'></i><i style='background:#FB6F92' title='#FB6F92'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#E60038' title='#E60038'></i><i style='background:#E60039' title='#E60039'></i><i style='background:#E60039' title='#E60039'></i><i style='background:#E4063E' title='#E4063E'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #E60038;border-radius:16px;background:#FCE6EB;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#E60038;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#990026">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#30121A">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#E60038;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#E60038;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #F7B2C3;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#FCE6EB;font-weight:700;font-size:13.5px;color:#990026">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#30121A">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #F7B2C3;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#990026">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#30121A">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #E60039;border-radius:16px;background:#FCE6EB;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#E60039;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#990026">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#30121A">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#E60039;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#E60039;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #F7B2C4;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#FCE6EB;font-weight:700;font-size:13.5px;color:#990026">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#30121A">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #F7B2C4;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#990026">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#30121A">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>13</span>Muted sage and teal</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#CAD2C5' title='#CAD2C5'></i><i style='background:#84A98C' title='#84A98C'></i><i style='background:#52796F' title='#52796F'></i><i style='background:#354F52' title='#354F52'></i><i style='background:#2F3E46' title='#2F3E46'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#67785D' title='#67785D'></i><i style='background:#567B5E' title='#567B5E'></i><i style='background:#52796F' title='#52796F'></i><i style='background:#354F52' title='#354F52'></i><i style='background:#2F3E46' title='#2F3E46'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #67785D;border-radius:16px;background:#F0F2EF;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#67785D;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#475340">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#20251D">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#67785D;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#67785D;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #D2D7CE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F0F2EF;font-weight:700;font-size:13.5px;color:#475340">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#20251D">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #D2D7CE;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#475340">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#20251D">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #567B5E;border-radius:16px;background:#EEF2EF;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#567B5E;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#3B5440">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#1B271E">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#567B5E;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#567B5E;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #CCD7CF;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#EEF2EF;font-weight:700;font-size:13.5px;color:#3B5440">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#1B271E">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #CCD7CF;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#3B5440">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#1B271E">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>14</span>Royal blues</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#0466C8' title='#0466C8'></i><i style='background:#0353A4' title='#0353A4'></i><i style='background:#023E7D' title='#023E7D'></i><i style='background:#002855' title='#002855'></i><i style='background:#001845' title='#001845'></i><i style='background:#001233' title='#001233'></i><i style='background:#33415C' title='#33415C'></i><i style='background:#5C677D' title='#5C677D'></i><i style='background:#7D8597' title='#7D8597'></i><i style='background:#979DAC' title='#979DAC'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#0466C8' title='#0466C8'></i><i style='background:#0353A4' title='#0353A4'></i><i style='background:#002855' title='#002855'></i><i style='background:#001845' title='#001845'></i><i style='background:#33415C' title='#33415C'></i><i style='background:#5C677D' title='#5C677D'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #0466C8;border-radius:16px;background:#E6F0FA;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#0466C8;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#034C96">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122130">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#0466C8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#0466C8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #B4D1EE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E6F0FA;font-weight:700;font-size:13.5px;color:#034C96">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122130">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #B4D1EE;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#034C96">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122130">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #0353A4;border-radius:16px;background:#E6EEF6;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#0353A4;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#034B95">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122130">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#0353A4;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#0353A4;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #B3CBE4;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E6EEF6;font-weight:700;font-size:13.5px;color:#034B95">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122130">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #B3CBE4;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#034B95">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122130">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>15</span>Purple spectrum</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#10002B' title='#10002B'></i><i style='background:#240046' title='#240046'></i><i style='background:#3C096C' title='#3C096C'></i><i style='background:#5A189A' title='#5A189A'></i><i style='background:#7B2CBF' title='#7B2CBF'></i><i style='background:#9D4EDD' title='#9D4EDD'></i><i style='background:#C77DFF' title='#C77DFF'></i><i style='background:#E0AAFF' title='#E0AAFF'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#10002B' title='#10002B'></i><i style='background:#240046' title='#240046'></i><i style='background:#5A189A' title='#5A189A'></i><i style='background:#7B2CBF' title='#7B2CBF'></i><i style='background:#A630FF' title='#A630FF'></i><i style='background:#B025FF' title='#B025FF'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #10002B;border-radius:16px;background:#E7E6EA;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#10002B;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#10002B">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#1D1230">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#10002B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#10002B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #B7B2BF;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E7E6EA;font-weight:700;font-size:13.5px;color:#10002B">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#1D1230">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #B7B2BF;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#10002B">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#1D1230">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #240046;border-radius:16px;background:#E9E6EC;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#240046;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#240046">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#221230">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#240046;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#240046;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BDB2C8;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E9E6EC;font-weight:700;font-size:13.5px;color:#240046">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#221230">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #BDB2C8;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#240046">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#221230">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>16</span>Material blues</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#E3F2FD' title='#E3F2FD'></i><i style='background:#BBDEFB' title='#BBDEFB'></i><i style='background:#90CAF9' title='#90CAF9'></i><i style='background:#64B5F6' title='#64B5F6'></i><i style='background:#42A5F5' title='#42A5F5'></i><i style='background:#2196F3' title='#2196F3'></i><i style='background:#1E88E5' title='#1E88E5'></i><i style='background:#1976D2' title='#1976D2'></i><i style='background:#1565C0' title='#1565C0'></i><i style='background:#0D47A1' title='#0D47A1'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#0C76CF' title='#0C76CF'></i><i style='background:#0C75CA' title='#0C75CA'></i><i style='background:#0B75CB' title='#0B75CB'></i><i style='background:#1775C8' title='#1775C8'></i><i style='background:#1976D2' title='#1976D2'></i><i style='background:#0D47A1' title='#0D47A1'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #0C76CF;border-radius:16px;background:#E7F1FA;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#0C76CF;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#08508B">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122330">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#0C76CF;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#0C76CF;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #B6D6F0;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E7F1FA;font-weight:700;font-size:13.5px;color:#08508B">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122330">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #B6D6F0;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#08508B">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122330">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #0C75CA;border-radius:16px;background:#E7F1FA;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#0C75CA;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#084E86">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122330">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#0C75CA;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#0C75CA;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #B6D6EF;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E7F1FA;font-weight:700;font-size:13.5px;color:#084E86">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122330">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #B6D6EF;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#084E86">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122330">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>17</span>Clinical rainbow (sickle cell content)</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#6B3FA0' title='#6B3FA0'></i><i style='background:#1E6FC8' title='#1E6FC8'></i><i style='background:#2E8B57' title='#2E8B57'></i><i style='background:#C98A00' title='#C98A00'></i><i style='background:#D2461E' title='#D2461E'></i><i style='background:#B3122E' title='#B3122E'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#6B3FA0' title='#6B3FA0'></i><i style='background:#1E6FC8' title='#1E6FC8'></i><i style='background:#2E8B57' title='#2E8B57'></i><i style='background:#C98A00' title='#C98A00'></i><i style='background:#D2461E' title='#D2461E'></i><i style='background:#B3122E' title='#B3122E'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #6B3FA0;border-radius:16px;background:#F5EFFB;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#6B3FA0;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#4A2377">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#2B1646">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#6B3FA0;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#6B3FA0;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #D9C7EE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F5EFFB;font-weight:700;font-size:13.5px;color:#4A2377">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#2B1646">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #D9C7EE;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#4A2377">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#2B1646">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #1E6FC8;border-radius:16px;background:#EBF3FD;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1E6FC8;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#124C8F">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#0F2A4A">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BFD7F4;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#EBF3FD;font-weight:700;font-size:13.5px;color:#124C8F">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#0F2A4A">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #BFD7F4;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#124C8F">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#0F2A4A">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>18</span>MedSynapse tree (blue, green, purple, orange)</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#3678D4' title='#3678D4'></i><i style='background:#1B9E5A' title='#1B9E5A'></i><i style='background:#7B61C9' title='#7B61C9'></i><i style='background:#E58A2B' title='#E58A2B'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#3678D4' title='#3678D4'></i><i style='background:#1B9E5A' title='#1B9E5A'></i><i style='background:#7B61C9' title='#7B61C9'></i><i style='background:#E58A2B' title='#E58A2B'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #3678D4;border-radius:16px;background:#F4F8FE;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#3678D4;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#1F4F99">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#0F2A4A">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#3678D4;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#3678D4;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BFD4F2;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F4F8FE;font-weight:700;font-size:13.5px;color:#1F4F99">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#0F2A4A">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #BFD4F2;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#1F4F99">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#0F2A4A">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #1B9E5A;border-radius:16px;background:#F2FBF6;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1B9E5A;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#127040">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#0E3320">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#1B9E5A;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#1B9E5A;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BFE5D0;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F2FBF6;font-weight:700;font-size:13.5px;color:#127040">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#0E3320">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #BFE5D0;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#127040">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#0E3320">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>19</span>Crimson and navy</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#780000' title='#780000'></i><i style='background:#C1121F' title='#C1121F'></i><i style='background:#FDF0D5' title='#FDF0D5'></i><i style='background:#003049' title='#003049'></i><i style='background:#669BBC' title='#669BBC'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#780000' title='#780000'></i><i style='background:#C1121F' title='#C1121F'></i><i style='background:#996907' title='#996907'></i><i style='background:#003049' title='#003049'></i><i style='background:#447A9C' title='#447A9C'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #780000;border-radius:16px;background:#F2E6E6;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#780000;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#780000">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#301212">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#780000;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#780000;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #D6B2B2;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F2E6E6;font-weight:700;font-size:13.5px;color:#780000">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#301212">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #D6B2B2;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#780000">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#301212">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #C1121F;border-radius:16px;background:#F9E7E9;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#C1121F;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#970E18">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#301214">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#C1121F;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#C1121F;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #ECB8BC;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F9E7E9;font-weight:700;font-size:13.5px;color:#970E18">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#301214">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #ECB8BC;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#970E18">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#301214">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>20</span>Leather and gold</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#6F1D1B' title='#6F1D1B'></i><i style='background:#BB9457' title='#BB9457'></i><i style='background:#432818' title='#432818'></i><i style='background:#99582A' title='#99582A'></i><i style='background:#FFE6A7' title='#FFE6A7'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#6F1D1B' title='#6F1D1B'></i><i style='background:#906F3A' title='#906F3A'></i><i style='background:#432818' title='#432818'></i><i style='background:#99582A' title='#99582A'></i><i style='background:#986D00' title='#986D00'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #6F1D1B;border-radius:16px;background:#F1E8E8;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#6F1D1B;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#6F1D1B">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#301312">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#6F1D1B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#6F1D1B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #D4BBBB;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F1E8E8;font-weight:700;font-size:13.5px;color:#6F1D1B">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#301312">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #D4BBBB;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#6F1D1B">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#301312">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #906F3A;border-radius:16px;background:#F4F1EB;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#906F3A;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#614B27">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#2F2413">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#906F3A;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#906F3A;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #DED4C4;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#F4F1EB;font-weight:700;font-size:13.5px;color:#614B27">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#2F2413">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #DED4C4;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#614B27">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#2F2413">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>21</span>Violet and flame</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#3D348B' title='#3D348B'></i><i style='background:#7678ED' title='#7678ED'></i><i style='background:#F7B801' title='#F7B801'></i><i style='background:#F18701' title='#F18701'></i><i style='background:#F35B04' title='#F35B04'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#3D348B' title='#3D348B'></i><i style='background:#5F62EA' title='#5F62EA'></i><i style='background:#916C01' title='#916C01'></i><i style='background:#AA5F01' title='#AA5F01'></i><i style='background:#C64A03' title='#C64A03'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #3D348B;border-radius:16px;background:#ECEBF3;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#3D348B;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#3D348B">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#151230">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#3D348B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#3D348B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #C5C2DC;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#ECEBF3;font-weight:700;font-size:13.5px;color:#3D348B">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#151230">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #C5C2DC;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#3D348B">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#151230">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #5F62EA;border-radius:16px;background:#EFEFFD;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#5F62EA;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#2528E2">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#121330">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#5F62EA;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#5F62EA;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #CFD0F9;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#EFEFFD;font-weight:700;font-size:13.5px;color:#2528E2">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#121330">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #CFD0F9;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#2528E2">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#121330">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>22</span>Teal and sunset</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#264653' title='#264653'></i><i style='background:#2A9D8F' title='#2A9D8F'></i><i style='background:#E9C46A' title='#E9C46A'></i><i style='background:#F4A261' title='#F4A261'></i><i style='background:#E76F51' title='#E76F51'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#264653' title='#264653'></i><i style='background:#228175' title='#228175'></i><i style='background:#906C15' title='#906C15'></i><i style='background:#B9590D' title='#B9590D'></i><i style='background:#CF401D' title='#CF401D'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #264653;border-radius:16px;background:#E9ECEE;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#264653;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#264653">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#15262D">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#264653;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#264653;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BEC8CB;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E9ECEE;font-weight:700;font-size:13.5px;color:#264653">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#15262D">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #BEC8CB;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#264653">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#15262D">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #228175;border-radius:16px;background:#E9F2F1;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#228175;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#17554D">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#12302C">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#228175;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#228175;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BDD9D6;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E9F2F1;font-weight:700;font-size:13.5px;color:#17554D">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#12302C">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #BDD9D6;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#17554D">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#12302C">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>23</span>Terracotta and sage</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#E07A5F' title='#E07A5F'></i><i style='background:#3D405B' title='#3D405B'></i><i style='background:#81B29A' title='#81B29A'></i><i style='background:#F2CC8F' title='#F2CC8F'></i><i style='background:#F4F1DE' title='#F4F1DE'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#CB4A27' title='#CB4A27'></i><i style='background:#3D405B' title='#3D405B'></i><i style='background:#4C7C64' title='#4C7C64'></i><i style='background:#9E6812' title='#9E6812'></i><i style='background:#80742B' title='#80742B'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #CB4A27;border-radius:16px;background:#FAEDE9;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#CB4A27;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#87311A">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#301812">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#CB4A27;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#CB4A27;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #EFC9BE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#FAEDE9;font-weight:700;font-size:13.5px;color:#87311A">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#301812">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #EFC9BE;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#87311A">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#301812">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #3D405B;border-radius:16px;background:#ECECEF;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#3D405B;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#3D405B">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#1B1C28">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#3D405B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#3D405B;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #C5C6CE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#ECECEF;font-weight:700;font-size:13.5px;color:#3D405B">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#1B1C28">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #C5C6CE;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#3D405B">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#1B1C28">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='pal'><div class='t'><span>24</span>Plum and mint</div><div class='lab'>Palette colours</div><div class='sw'><i style='background:#3C1642' title='#3C1642'></i><i style='background:#086375' title='#086375'></i><i style='background:#1DD3B0' title='#1DD3B0'></i><i style='background:#AFFC41' title='#AFFC41'></i><i style='background:#B2FF9E' title='#B2FF9E'></i></div><div class='lab'>Section colours used</div><div class='sw'><i style='background:#3C1642' title='#3C1642'></i><i style='background:#086375' title='#086375'></i><i style='background:#12826D' title='#12826D'></i><i style='background:#4B7E02' title='#4B7E02'></i><i style='background:#1B8400' title='#1B8400'></i></div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #3C1642;border-radius:16px;background:#ECE8EC;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#3C1642;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#3C1642">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#2C1230">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#3C1642;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#3C1642;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #C4B9C6;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#ECE8EC;font-weight:700;font-size:13.5px;color:#3C1642">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#2C1230">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #C4B9C6;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#3C1642">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#2C1230">Always-visible detail.</p></div>
+  </div>
+</div>
+<div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #086375;border-radius:16px;background:#E6EFF1;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#086375;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#075362">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122B30">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#086375;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#086375;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #B5D0D6;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E6EFF1;font-weight:700;font-size:13.5px;color:#075362">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122B30">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #B5D0D6;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#075362">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122B30">Always-visible detail.</p></div>
+  </div>
+</div>
+</div></div><h2 id='layout'>2. Layout</h2><p class='note'>Shown in one neutral colour so you can compare the shapes. Any layout works with any palette.</p><div class='grid'><div class='lay'><div class='t'><span>A</span>Classic: white cards, library look</div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;background:#fff;border:1px solid #E6EDF9;border-radius:14px;padding:16px"><h3 style="margin:0 0 3px;font-size:16px;font-weight:700;color:#0C1A33">Section heading</h3><p style="margin:0 0 10px;font-size:13px;color:#5B6B86;line-height:1.5">One-line lead sentence for the section.</p><div style="padding:12px;border-radius:12px;border:1px solid #E6EDF9"><b style="font-size:14px;color:#0C1A33">Card heading</b><p style="margin:4px 0 0;font-size:12.6px;color:#3A4A61;line-height:1.5">Library look: white cards, thin borders, blue and pink accents.</p></div></div></div><div class='lay'><div class='t'><span>B</span>Tinted: coloured section cards</div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #1E6FC8;border-radius:16px;background:#E8F1FA;padding:16px;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1E6FC8;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#154F8E">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122030">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BCD4EE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E8F1FA;font-weight:700;font-size:13.5px;color:#154F8E">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122030">Detail revealed on tap.</p></details>
+    <div style="background:#fff;border:1px solid #BCD4EE;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#154F8E">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122030">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='lay'><div class='t'><span>C</span>Banded: solid colour header bar</div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;border:1.5px solid #1E6FC8;border-radius:14px;background:#fff;margin-bottom:14px">
+  <div style="display:flex;align-items:center;gap:10px;background:#1E6FC8;border-radius:12px 12px 0 0;padding:11px 16px"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#fff;color:#154F8E;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#fff">Section heading</h3></div>
+  <div style="padding:16px">
+    <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122030">One-line lead sentence for the section:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+      <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+      <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+      <details style="background:#fff;border:1px solid #BCD4EE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E8F1FA;font-weight:700;font-size:13.5px;color:#154F8E">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122030">Detail revealed on tap.</p></details>
+      <div style="background:#E8F1FA;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#154F8E">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122030">Always-visible detail.</p></div>
+    </div>
+  </div>
+</div>
+</div><div class='lay'><div class='t'><span>D</span>Clean: slim left accent bar</div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;background:#fff;border:1px solid #BCD4EE;border-left:6px solid #1E6FC8;border-radius:12px;padding:16px;margin-bottom:14px">
+  <span style="display:block;margin-bottom:4px;font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#1E6FC8">Section 1</span>
+  <h3 style="margin:0 0 8px;font-size:17px;font-weight:800;color:#154F8E">Section heading</h3>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122030">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#E8F1FA;border:1px solid #BCD4EE;color:#154F8E;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#E8F1FA;border:1px solid #BCD4EE;color:#154F8E;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BCD4EE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E8F1FA;font-weight:700;font-size:13.5px;color:#154F8E">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122030">Detail revealed on tap.</p></details>
+    <div style="background:#E8F1FA;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#154F8E">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122030">Always-visible detail.</p></div>
+  </div>
+</div>
+</div><div class='lay'><div class='t'><span>E</span>Top rule: heavy coloured top edge</div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;background:#fff;border:1px solid #BCD4EE;border-top:5px solid #1E6FC8;border-radius:6px 6px 14px 14px;padding:16px;margin-bottom:14px">
+  <span style="display:block;margin-bottom:4px;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#1E6FC8">Section 1</span>
+  <h3 style="margin:0 0 8px;font-size:17px;font-weight:800;color:#154F8E">Section heading</h3>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122030">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BCD4EE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E8F1FA;font-weight:700;font-size:13.5px;color:#154F8E">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122030">Detail revealed on tap.</p></details>
+    <div style="background:#E8F1FA;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#154F8E">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122030">Always-visible detail.</p></div>
+  </div></div>
+</div><div class='lay'><div class='t'><span>F</span>Editorial: big numeral, open</div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;background:#fff;border-bottom:2px solid #1E6FC8;padding:4px 0 18px;margin-bottom:18px">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px"><span style="flex:none;font-size:40px;font-weight:300;line-height:1;letter-spacing:-.02em;color:#1E6FC8">01</span><h3 style="margin:0;font-size:17px;font-weight:800;color:#154F8E">Section heading</h3></div>
+  <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122030">One-line lead sentence for the section:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+    <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+    <details style="background:#fff;border:1px solid #BCD4EE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E8F1FA;font-weight:700;font-size:13.5px;color:#154F8E">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122030">Detail revealed on tap.</p></details>
+    <div style="background:#E8F1FA;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#154F8E">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122030">Always-visible detail.</p></div>
+  </div></div>
+</div><div class='lay'><div class='t'><span>G</span>Stepper: numbered rail</div><div style="font-family:'Roboto','Segoe UI',Arial,sans-serif;display:flex;gap:12px;margin-bottom:6px">
+  <div style="flex:none;display:flex;flex-direction:column;align-items:center;width:30px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1E6FC8;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><div style="flex:1;width:2px;min-height:14px;margin-top:6px;background:#BCD4EE;font-size:0;line-height:0">&nbsp;</div></div>
+  <div style="flex:1;min-width:0;padding-bottom:18px">
+    <h3 style="margin:3px 0 8px;font-size:17px;font-weight:800;color:#154F8E">Section heading</h3>
+    <p style="margin:0 0 8px;font-size:13.5px;line-height:1.55;color:#122030">One-line lead sentence for the section:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+      <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+      <span style="padding:6px 12px;border-radius:999px;background:#1E6FC8;color:#fff;font-size:12px;font-weight:700">Short term</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+      <details style="background:#fff;border:1px solid #BCD4EE;border-radius:12px;padding:6px"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E8F1FA;font-weight:700;font-size:13.5px;color:#154F8E">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px;line-height:1.5;color:#122030">Detail revealed on tap.</p></details>
+      <div style="background:#E8F1FA;border-radius:12px;padding:12px 14px"><b style="font-size:14px;color:#154F8E">Static card heading</b><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#122030">Always-visible detail.</p></div>
+    </div>
+  </div>
+</div>
+</div></div><h2 id='cue'>3. Tap cue</h2><p class='note'>How readers know a card opens. These demos are live: click them.</p><div class='grid'><div class='lay'><div class='t'><span>0</span>Plain</div><p class='note'>Browser arrow only. Library original.</p><details style="border:1px solid #E6EDF9;border-radius:10px;padding:10px 14px"><summary style="cursor:pointer;font-weight:700;font-size:13.5px">Card heading</summary><p style="margin:6px 0 0;font-size:13px">Detail revealed on tap.</p></details></div><div class='lay'><div class='t'><span>1</span>Subtle</div><p class='note'>Arrow kept, tinted button-style row. No chip, no animation.</p><details style="border:1px solid #E6EDF9;border-radius:12px;padding:6px;background:#fff"><summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:#E8F0FE;font-weight:700;font-size:13.5px">Card heading</summary><p style="margin:8px 6px 4px;font-size:13px">Detail revealed on tap.</p></details></div><div class='lay'><div class='t'><span>2</span>Pulse chevron (default)</div><p class='note'>Round chevron on every row; a soft pulse on the first row only.</p><details style="border:1px solid #E6EDF9;border-radius:12px;padding:6px;background:#fff"><summary style="cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;border-radius:8px;background:#E8F0FE;font-weight:700;font-size:13.5px;line-height:1.35"><span>Card heading</span><span style="position:relative;flex:none;display:block;width:28px;height:28px"><img src="https://cdn.jsdelivr.net/gh/desaikaushik1997/medsyn-assets@main/pulse-dot.svg" alt="" style="position:absolute;left:0;top:0;width:28px;height:28px;pointer-events:none"><span style="position:absolute;left:4px;top:4px;display:block;width:20px;height:20px;border-radius:50%;background:#0168FA;color:#fff;font-size:11px;line-height:20px;text-align:center">&#9662;</span></span></summary><p style="margin:8px 6px 4px;font-size:13px">Detail revealed on tap.</p></details></div><div class='lay'><div class='t'><span>4</span>Ripple row</div><p class='note'>A soft ripple inside the first row of each group; chevron on every row.</p><details style="border:1px solid #E6EDF9;border-radius:12px;padding:6px;background:#fff"><summary style="cursor:pointer;list-style:none;position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;border-radius:8px;background:#E8F0FE;font-weight:700;font-size:13.5px;line-height:1.35"><div style="position:absolute;left:0;top:0;right:0;bottom:0;border-radius:8px;background:url(https://cdn.jsdelivr.net/gh/desaikaushik1997/medsyn-assets@main/button-ripple.svg) no-repeat center/100% 100%;pointer-events:none;font-size:0;line-height:0">&nbsp;</div><span style="position:relative">Card heading</span><span style="position:relative;flex:none;display:block;width:28px;height:28px"><span style="position:absolute;left:4px;top:4px;display:block;width:20px;height:20px;border-radius:50%;background:#0168FA;color:#fff;font-size:11px;line-height:20px;text-align:center">&#9662;</span></span></summary><p style="margin:8px 6px 4px;font-size:13px">Detail revealed on tap.</p></details></div><div class='lay'><div class='t'><span>5</span>Solid rows + white ripple</div><p class='note'>Solid colour rows with a white chevron; a white ripple on the first row.</p><details style="border:1px solid #E6EDF9;border-radius:12px;padding:6px;background:#fff"><summary style="cursor:pointer;list-style:none;position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;border-radius:8px;background:#0168FA;color:#fff;font-weight:700;font-size:13.5px;line-height:1.35"><div style="position:absolute;left:0;top:0;right:0;bottom:0;border-radius:8px;background:url(https://cdn.jsdelivr.net/gh/desaikaushik1997/medsyn-assets@main/button-ripple-white.svg) no-repeat center/100% 100%;pointer-events:none;font-size:0;line-height:0">&nbsp;</div><span style="position:relative">Card heading</span><span style="position:relative;flex:none;display:block;width:28px;height:28px"><span style="position:absolute;left:4px;top:4px;display:block;width:20px;height:20px;border-radius:50%;background:#fff;color:#0168FA;font-size:11px;line-height:20px;text-align:center">&#9662;</span></span></summary><p style="margin:8px 6px 4px;font-size:13px">Detail revealed on tap.</p></details></div><div class='lay'><div class='t'><span>6</span>Arrow trail</div><p class='note'>A flowing arrow on the first row of each group; plain chevron on the rest.</p><details style="border:1px solid #E6EDF9;border-radius:12px;padding:6px;background:#fff"><summary style="cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;border-radius:8px;background:#E8F0FE;font-weight:700;font-size:13.5px;line-height:1.35"><span>Card heading</span><span style="position:relative;flex:none;display:block;width:28px;height:28px"><img src="https://cdn.jsdelivr.net/gh/desaikaushik1997/medsyn-assets@main/flow-down.svg" alt="" style="position:absolute;left:4px;top:0;width:20px;height:28px;pointer-events:none"><span style="position:absolute;left:4px;top:4px;display:block;width:20px;height:20px;border-radius:50%;background:#0168FA;color:#fff;font-size:11px;line-height:20px;text-align:center">&#9662;</span></span></summary><p style="margin:8px 6px 4px;font-size:13px">Detail revealed on tap.</p></details></div><div class='lay'><div class='t'><span>3</span>TAP chips</div><p class='note'>A TAP chip on every card. Only if the client asks.</p><details style="border:1px solid #E6EDF9;border-radius:10px;padding:10px 14px;background:#F8FAFE"><summary style="display:block;list-style:none;cursor:pointer;font-weight:700;font-size:13.5px"><span style="float:right;margin:1px 0 4px 10px;padding:3px 9px;border-radius:999px;background:#fff;border:1px solid #C9D8F5;font-size:10px;font-weight:800;letter-spacing:.08em;color:#0B4ECC;line-height:1.4">TAP</span>Card heading</summary><p style="margin:8px 0 0;font-size:13px">Detail revealed on tap.</p></details></div></div></div></body></html>
