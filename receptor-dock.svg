@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" role="img" aria-label="">
+<rect x="0" y="84" width="220" height="10" rx="5" fill="#0168FA" opacity=".18"/>
+<path d="M82 58 V92 Q82 112 110 112 Q138 112 138 92 V58 H124 V88 Q124 98 110 98 Q96 98 96 88 V58 Z" fill="#0168FA">
+<animate attributeName="opacity" values=".55;.55;1;1;.55" keyTimes="0;.42;.5;.78;1" dur="7s" repeatCount="indefinite"/></path>
+<circle cx="110" cy="84" r="24" fill="none" stroke="#0168FA" stroke-width="2" opacity="0">
+<animate attributeName="r" values="14;14;50;50" keyTimes="0;.48;.72;1" dur="7s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0;0;.7;0;0" keyTimes="0;.47;.5;.72;1" dur="7s" repeatCount="indefinite"/></circle>
+<circle r="11" fill="#0168FA"><animateMotion dur="7s" repeatCount="indefinite" keyTimes="0;.45;.8;1" keyPoints="0;1;1;0" calcMode="linear" path="M24 16 C60 8 104 16 110 84"/>
+<animate attributeName="opacity" values="0;1;1;1;0;0" keyTimes="0;.08;.45;.78;.86;1" dur="7s" repeatCount="indefinite"/></circle>
+<g fill="#0168FA"><circle cx="96" cy="118" r="4" opacity="0"><animate attributeName="cy" values="118;118;146" keyTimes="0;.55;.8" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.54;.58;.8;1" dur="7s" repeatCount="indefinite"/></circle>
+<circle cx="110" cy="118" r="4" opacity="0"><animate attributeName="cy" values="118;118;146" keyTimes="0;.6;.85" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.59;.63;.85;1" dur="7s" repeatCount="indefinite"/></circle>
+<circle cx="124" cy="118" r="4" opacity="0"><animate attributeName="cy" values="118;118;146" keyTimes="0;.65;.9" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.64;.68;.9;1" dur="7s" repeatCount="indefinite"/></circle></g>
+</svg>
