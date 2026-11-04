@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 110" role="img" aria-label="">
+<path d="M120 54 L104 100 H136 Z" fill="#B3264F" opacity=".85"/>
+<rect x="88" y="100" width="64" height="5" rx="2.5" fill="#B3264F"/>
+<g><animateTransform attributeName="transform" type="rotate" values="-5 120 50;5 120 50;-5 120 50" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" keyTimes="0;0.5;1"/>
+<rect x="24" y="47" width="192" height="6" rx="3" fill="#B3264F"/>
+<circle cx="120" cy="50" r="8" fill="#fff" stroke="#B3264F" stroke-width="4"/>
+<circle cx="30" cy="34" r="13" fill="#B3264F" opacity=".35"/><circle cx="210" cy="34" r="13" fill="#B3264F" opacity=".35"/>
+<circle cx="30" cy="34" r="7" fill="#B3264F"/><circle cx="210" cy="34" r="7" fill="#B3264F"/>
+</g></svg>
